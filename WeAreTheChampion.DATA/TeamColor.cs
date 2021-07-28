@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace WeAreTheChampion.DATA
 {
-    class TeamColor
+   public class TeamColor
     {
+        public int TeamId { get; set; }
+        public int ColorId { get; set; }
     }
 }

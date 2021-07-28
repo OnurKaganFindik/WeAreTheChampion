@@ -16,5 +16,23 @@ namespace WeAreTheChampion.UI
         {
             InitializeComponent();
         }
+
+        private void tsmiTakimlar_Click(object sender, EventArgs e)
+        {
+            TakimlarForm takimlarForm = new TakimlarForm();
+            takimlarForm.ShowDialog();
+        }
+
+        private void tsmiRenkler_Click(object sender, EventArgs e)
+        {
+            RenklerForm renklerForm = new RenklerForm();
+            renklerForm.ShowDialog();
+        }
+
+        private void tsmiOyuncular_Click(object sender, EventArgs e)
+        {
+            OyuncularForm oyuncularForm = new OyuncularForm();
+            oyuncularForm.ShowDialog();
+        }
     }
 }
