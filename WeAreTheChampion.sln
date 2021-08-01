@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.31515.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeAreTheChampion.UI", "WeAreTheChampion.UI\WeAreTheChampion.UI.csproj", "{303B83D9-3ADD-4C08-A8F4-329A91B6986F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeAreTheChampion.DATA", "WeAreTheChampion.DATA\WeAreTheChampion.DATA.csproj", "{645B1404-F194-4EEB-BDBE-9EB639109AEF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeAreTheChampion.DATA", "WeAreTheChampion.DATA\WeAreTheChampion.DATA.csproj", "{E9987A56-6FF9-4C96-BE7F-15A88C94C48A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{303B83D9-3ADD-4C08-A8F4-329A91B6986F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{303B83D9-3ADD-4C08-A8F4-329A91B6986F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{303B83D9-3ADD-4C08-A8F4-329A91B6986F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{645B1404-F194-4EEB-BDBE-9EB639109AEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{645B1404-F194-4EEB-BDBE-9EB639109AEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{645B1404-F194-4EEB-BDBE-9EB639109AEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{645B1404-F194-4EEB-BDBE-9EB639109AEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9987A56-6FF9-4C96-BE7F-15A88C94C48A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9987A56-6FF9-4C96-BE7F-15A88C94C48A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9987A56-6FF9-4C96-BE7F-15A88C94C48A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9987A56-6FF9-4C96-BE7F-15A88C94C48A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

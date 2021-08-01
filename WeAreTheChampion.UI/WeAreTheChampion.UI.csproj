@@ -129,7 +129,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WeAreTheChampion.DATA\WeAreTheChampion.DATA.csproj">
-      <Project>{645b1404-f194-4eeb-bdbe-9eb639109aef}</Project>
+      <Project>{e9987a56-6ff9-4c96-be7f-15a88c94c48a}</Project>
       <Name>WeAreTheChampion.DATA</Name>
     </ProjectReference>
   </ItemGroup>
