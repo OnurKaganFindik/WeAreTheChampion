@@ -7,14 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WeAreTheChampion.DATA;
 
 namespace WeAreTheChampion.UI
 {
     public partial class AnaForm : Form
     {
+        WeAreTheChampionContext db = new WeAreTheChampionContext();
         public AnaForm()
         {
             InitializeComponent();
+            Listele();
+        }
+
+        private void Listele()
+        {
+            //dgvAnaform.DataSource = db.
         }
 
         private void tsmiTakimlar_Click(object sender, EventArgs e)

@@ -16,5 +16,10 @@ namespace WeAreTheChampion.UI
         {
             InitializeComponent(); 
         }
+
+        private void btnEkle_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

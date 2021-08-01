@@ -14,6 +14,10 @@ namespace WeAreTheChampion.UI
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
+            if (disposing)
+            {
+                db.Dispose();
+            }
             if (disposing && (components != null))
             {
                 components.Dispose();
@@ -35,17 +39,17 @@ namespace WeAreTheChampion.UI
             this.tsmiOyuncular = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnYeniKarsilasma = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnDuzenle = new System.Windows.Forms.Button();
-            this.btnSil = new System.Windows.Forms.Button();
+            this.dgvAnaform = new System.Windows.Forms.DataGridView();
             this.takim1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.takim2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tarih = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.saat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sonuc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnDuzenle = new System.Windows.Forms.Button();
+            this.btnSil = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAnaform)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -90,7 +94,7 @@ namespace WeAreTheChampion.UI
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.btnYeniKarsilasma);
-            this.groupBox1.Controls.Add(this.dataGridView1);
+            this.groupBox1.Controls.Add(this.dgvAnaform);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBox1.Location = new System.Drawing.Point(12, 31);
             this.groupBox1.Name = "groupBox1";
@@ -109,40 +113,22 @@ namespace WeAreTheChampion.UI
             this.btnYeniKarsilasma.UseVisualStyleBackColor = true;
             this.btnYeniKarsilasma.Click += new System.EventHandler(this.btnYeniKarsilasma_Click);
             // 
-            // dataGridView1
+            // dgvAnaform
             // 
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvAnaform.AllowUserToOrderColumns = true;
+            this.dgvAnaform.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAnaform.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.takim1,
             this.takim2,
             this.tarih,
             this.saat,
             this.sonuc});
-            this.dataGridView1.Location = new System.Drawing.Point(6, 45);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 50;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(696, 334);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // btnDuzenle
-            // 
-            this.btnDuzenle.Location = new System.Drawing.Point(27, 422);
-            this.btnDuzenle.Name = "btnDuzenle";
-            this.btnDuzenle.Size = new System.Drawing.Size(237, 39);
-            this.btnDuzenle.TabIndex = 1;
-            this.btnDuzenle.Text = "Seçiliyi Düzenle";
-            this.btnDuzenle.UseVisualStyleBackColor = true;
-            // 
-            // btnSil
-            // 
-            this.btnSil.Location = new System.Drawing.Point(332, 422);
-            this.btnSil.Name = "btnSil";
-            this.btnSil.Size = new System.Drawing.Size(237, 39);
-            this.btnSil.TabIndex = 1;
-            this.btnSil.Text = "Seçiliyi Sil";
-            this.btnSil.UseVisualStyleBackColor = true;
+            this.dgvAnaform.Location = new System.Drawing.Point(6, 45);
+            this.dgvAnaform.Name = "dgvAnaform";
+            this.dgvAnaform.RowHeadersWidth = 50;
+            this.dgvAnaform.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dgvAnaform.Size = new System.Drawing.Size(696, 334);
+            this.dgvAnaform.TabIndex = 0;
             // 
             // takim1
             // 
@@ -177,6 +163,24 @@ namespace WeAreTheChampion.UI
             this.sonuc.Name = "sonuc";
             this.sonuc.Width = 20;
             // 
+            // btnDuzenle
+            // 
+            this.btnDuzenle.Location = new System.Drawing.Point(27, 422);
+            this.btnDuzenle.Name = "btnDuzenle";
+            this.btnDuzenle.Size = new System.Drawing.Size(237, 39);
+            this.btnDuzenle.TabIndex = 1;
+            this.btnDuzenle.Text = "Seçiliyi Düzenle";
+            this.btnDuzenle.UseVisualStyleBackColor = true;
+            // 
+            // btnSil
+            // 
+            this.btnSil.Location = new System.Drawing.Point(332, 422);
+            this.btnSil.Name = "btnSil";
+            this.btnSil.Size = new System.Drawing.Size(237, 39);
+            this.btnSil.TabIndex = 1;
+            this.btnSil.Text = "Seçiliyi Sil";
+            this.btnSil.UseVisualStyleBackColor = true;
+            // 
             // AnaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -193,7 +197,7 @@ namespace WeAreTheChampion.UI
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAnaform)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -207,7 +211,7 @@ namespace WeAreTheChampion.UI
         private System.Windows.Forms.ToolStripMenuItem tsmiOyuncular;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnYeniKarsilasma;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvAnaform;
         private System.Windows.Forms.Button btnDuzenle;
         private System.Windows.Forms.Button btnSil;
         private System.Windows.Forms.DataGridViewTextBoxColumn takim1;
