@@ -34,5 +34,12 @@ namespace WeAreTheChampion.UI
             OyuncularForm oyuncularForm = new OyuncularForm();
             oyuncularForm.ShowDialog();
         }
+
+        private void btnYeniKarsilasma_Click(object sender, EventArgs e)
+        {
+            KarsilasmaForm karsilasmaForm = new KarsilasmaForm();
+            karsilasmaForm.ShowDialog();
+
+        }
     }
 }

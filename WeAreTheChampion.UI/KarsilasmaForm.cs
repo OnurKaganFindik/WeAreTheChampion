@@ -14,7 +14,7 @@ namespace WeAreTheChampion.UI
     {
         public KarsilasmaForm()
         {
-            InitializeComponent();
+            InitializeComponent(); 
         }
     }
 }
